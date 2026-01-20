@@ -3,52 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación de Boda</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>María & Juan</title>
+
+  <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <main class="invitation">
-    <p class="subtitle">Nos casamos</p>
+<div class="background-shapes"></div>
+
+<main class="card">
+
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <p class="subtitle">Nuestra boda</p>
     <h1>María & Juan</h1>
-
     <div class="divider"></div>
+    <p class="date">15 · Agosto · 2026</p>
+  </section>
 
-    <p class="text">
-      Tenemos el honor de invitarte a celebrar nuestro matrimonio
-    </p>
+  <!-- CONTADOR -->
+  <section class="countdown fade-in delay">
+    <div><span id="days">00</span><small>Días</small></div>
+    <div><span id="hours">00</span><small>Horas</small></div>
+    <div><span id="minutes">00</span><small>Min</small></div>
+    <div><span id="seconds">00</span><small>Seg</small></div>
+  </section>
 
-    <p class="date">15 de Agosto de 2026</p>
-    <p class="place">Salón Los Rosales</p>
+  <!-- TEXTO -->
+  <p class="message fade-in delay-2">
+    Con la bendición de nuestras familias, te invitamos a compartir este momento tan especial.
+  </p>
 
-    <a 
-      href="https://maps.google.com"
-      target="_blank"
-      class="map-link"
-    >
-      Ver ubicación
-    </a>
+  <!-- GALERÍA -->
+  <section class="gallery fade-in delay-3">
+    <img src="assets/img/pareja1.jpg">
+    <img src="assets/img/pareja2.jpg">
+    <img src="assets/img/pareja3.jpg">
+  </section>
 
-    <section class="rsvp">
-      <h2>Confirma tu asistencia</h2>
+  <!-- FRASE -->
+  <p class="quote fade-in delay-4">
+    “El amor no se mira, se siente”
+  </p>
 
-      <form id="rsvpForm">
-        <input type="text" id="name" placeholder="Tu nombre" required>
+</main>
 
-        <select id="attendance" required>
-          <option value="">¿Asistirás?</option>
-          <option value="Sí asistiré">Sí asistiré</option>
-          <option value="No podré asistir">No podré asistir</option>
-        </select>
-
-        <button type="submit">Confirmar</button>
-      </form>
-    </section>
-  </main>
-
-  <script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

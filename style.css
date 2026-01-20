@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #FAF9F6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* FONDO ARTÍSTICO */
+.background-shapes::before,
+.background-shapes::after {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: #6B7A5F;
+  opacity: 0.15;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.background-shapes::before {
+  top: -100px;
+  left: -100px;
+}
+
+.background-shapes::after {
+  bottom: -120px;
+  right: -120px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  max-width: 420px;
+  width: 100%;
+  padding: 35px 25px;
+  border-radius: 25px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* HERO */
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #6B7A5F;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background: #C9A24D;
+  margin: 15px auto;
+}
+
+.date {
+  font-weight: bold;
+}
+
+/* CONTADOR */
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.countdown div {
+  width: 22%;
+  background: #FAF9F6;
+  padding: 12px;
+  border-radius: 15px;
+}
+
+.countdown span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6B7A5F;
+}
+
+.countdown small {
+  font-size: 12px;
+}
+
+/* TEXTO */
+.message {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* GALERÍA */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* FRASE */
+.quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #6B7A5F;
+}
+
+/* ANIMACIONES */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.delay { animation-delay: .4s; }
+.delay-2 { animation-delay: .7s; }
+.delay-3 { animation-delay: 1s; }
+.delay-4 { animation-delay: 1.3s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

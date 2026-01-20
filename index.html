@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>María & Juan</title>
 
-  <link rel="stylesheet" href="style.css"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- HERO CON IMAGEN DE FONDO -->
-<section class="hero bg-hero">
-  <div class="overlay"></div>
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-bg parallax" data-speed="0.25"></div>
+  <div class="hero-overlay"></div>
 
-  <div class="hero-content fade-up">
-    <p class="subtitle">Nuestra boda</p>
+  <div class="hero-text fade">
+    <p class="hero-subtitle">Nos casamos</p>
     <h1>María & Juan</h1>
-    <span class="line"></span>
-    <p class="date">15 · Agosto · 2026</p>
+    <span class="hero-divider"></span>
+    <p class="hero-date">15 de Agosto de 2026</p>
   </div>
 
-  <div class="wave"></div>
-</section>
+  <div class="hero-scroll">
+    <span>Desliza</span>
+    <div class="arrow"></div>
+  </div>
+</header>
 
-<!-- CONTADOR -->
-<section class="countdown-section fade-up delay-1">
+<!-- ================= CONTADOR ================= -->
+<section class="section fade delay-1">
   <div class="countdown">
     <div><span id="days">00</span><small>Días</small></div>
     <div><span id="hours">00</span><small>Horas</small></div>
@@ -37,30 +43,69 @@
   </div>
 </section>
 
-<!-- MENSAJE -->
-<section class="message-section fade-up delay-2">
+<!-- ================= MENSAJE ================= -->
+<section class="section text-section fade delay-2">
   <p>
-    Con la bendición de nuestras familias, te invitamos a compartir este día tan especial.
+    Con mucha alegría queremos invitarte a celebrar con nosotros
+    el inicio de esta nueva etapa de nuestras vidas.
   </p>
 </section>
 
-<!-- SECCIÓN FOTO FULL -->
-<section class="photo-section bg-photo-1">
-  <div class="overlay soft"></div>
+<!-- ================= BOTONES ================= -->
+<section class="section actions-section fade delay-3">
+  <a href="#" class="btn primary glow">Confirmar asistencia</a>
+  <a href="#mapa" class="btn secondary glow">Ver ubicación</a>
+  <a href="#" class="btn secondary glow">Mesa de regalos</a>
 </section>
 
-<!-- GALERÍA -->
-<section class="gallery-section fade-up delay-3">
-  <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" />
-  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
-  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" />
+<!-- ================= IMAGEN PARALLAX ================= -->
+<section class="image-section">
+  <div class="image-parallax parallax" data-speed="0.15">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Pareja">
+  </div>
 </section>
 
-<!-- FRASE -->
-<section class="quote-section fade-up delay-4">
-  <p>“El amor se construye todos los días.”</p>
+<!-- ================= HISTORIA ================= -->
+<section class="section story-section fade delay-4">
+  <h2>Nuestra historia</h2>
+  <p>
+    Todo comenzó con una mirada, una risa, y hoy estamos aquí,
+    listos para decir “sí” para siempre.
+  </p>
 </section>
 
+<!-- ================= MAPA ================= -->
+<section id="mapa" class="map-section fade delay-5">
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps?q=Ciudad%20de%20México&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!-- ================= GALERÍA ================= -->
+<section class="gallery-editorial">
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+  </div>
+
+  <div class="gallery-item">
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+  </div>
+</section>
+
+<!-- ================= FRASE FINAL ================= -->
+<section class="quote-section fade delay-5">
+  <p>“El amor verdadero se construye todos los días.”</p>
+</section>
+
+<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>

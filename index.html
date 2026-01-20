@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="invitation">
+    <p class="subtitle">Nos casamos</p>
+    <h1>María & Juan</h1>
+
+    <div class="divider"></div>
+
+    <p class="text">
+      Tenemos el honor de invitarte a celebrar nuestro matrimonio
+    </p>
+
+    <p class="date">15 de Agosto de 2026</p>
+    <p class="place">Salón Los Rosales</p>
+
+    <a 
+      href="https://maps.google.com"
+      target="_blank"
+      class="map-link"
+    >
+      Ver ubicación
+    </a>
+
+    <section class="rsvp">
+      <h2>Confirma tu asistencia</h2>
+
+      <form id="rsvpForm">
+        <input type="text" id="name" placeholder="Tu nombre" required>
+
+        <select id="attendance" required>
+          <option value="">¿Asistirás?</option>
+          <option value="Sí asistiré">Sí asistiré</option>
+          <option value="No podré asistir">No podré asistir</option>
+        </select>
+
+        <button type="submit">Confirmar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

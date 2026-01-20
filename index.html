@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>María & Juan</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="background-shapes"></div>
+<!-- HERO CON IMAGEN DE FONDO -->
+<section class="hero bg-hero">
+  <div class="overlay"></div>
 
-<main class="card">
-
-  <!-- HERO -->
-  <section class="hero fade-in">
+  <div class="hero-content fade-up">
     <p class="subtitle">Nuestra boda</p>
     <h1>María & Juan</h1>
-    <div class="divider"></div>
+    <span class="line"></span>
     <p class="date">15 · Agosto · 2026</p>
-  </section>
+  </div>
 
-  <!-- CONTADOR -->
-  <section class="countdown fade-in delay">
+  <div class="wave"></div>
+</section>
+
+<!-- CONTADOR -->
+<section class="countdown-section fade-up delay-1">
+  <div class="countdown">
     <div><span id="days">00</span><small>Días</small></div>
     <div><span id="hours">00</span><small>Horas</small></div>
     <div><span id="minutes">00</span><small>Min</small></div>
     <div><span id="seconds">00</span><small>Seg</small></div>
-  </section>
+  </div>
+</section>
 
-  <!-- TEXTO -->
-  <p class="message fade-in delay-2">
-    Con la bendición de nuestras familias, te invitamos a compartir este momento tan especial.
+<!-- MENSAJE -->
+<section class="message-section fade-up delay-2">
+  <p>
+    Con la bendición de nuestras familias, te invitamos a compartir este día tan especial.
   </p>
+</section>
 
-  <!-- GALERÍA -->
-  <section class="gallery fade-in delay-3">
-    <img src="assets/img/pareja1.jpg">
-    <img src="assets/img/pareja2.jpg">
-    <img src="assets/img/pareja3.jpg">
-  </section>
+<!-- SECCIÓN FOTO FULL -->
+<section class="photo-section bg-photo-1">
+  <div class="overlay soft"></div>
+</section>
 
-  <!-- FRASE -->
-  <p class="quote fade-in delay-4">
-    “El amor no se mira, se siente”
-  </p>
+<!-- GALERÍA -->
+<section class="gallery-section fade-up delay-3">
+  <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" />
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" />
+  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" />
+</section>
 
-</main>
+<!-- FRASE -->
+<section class="quote-section fade-up delay-4">
+  <p>“El amor se construye todos los días.”</p>
+</section>
 
 <script src="script.js"></script>
 </body>

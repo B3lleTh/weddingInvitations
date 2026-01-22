@@ -2,110 +2,91 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>María & Juan</title>
-
-  <!-- CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Boda María & Juan | 2026</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- ================= HERO ================= -->
-<header class="hero">
-  <div class="hero-bg parallax" data-speed="0.25"></div>
-  <div class="hero-overlay"></div>
+  <div class="floral-master-bg"></div>
+  <div class="floral-vignette"></div>
 
-  <div class="hero-text fade">
-    <p class="hero-subtitle">Nos casamos</p>
-    <h1>María & Juan</h1>
-    <span class="hero-divider"></span>
-    <p class="hero-date">15 de Agosto de 2026</p>
+  <div class="floating-petal p1"></div>
+  <div class="floating-petal p2"></div>
+  <div class="floating-petal p3"></div>
+
+  <header class="main-header">
+    <div class="hero-card">
+      <div class="hero-img-container">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1470" alt="Nuestra Boda">
+      </div>
+      <div class="hero-content">
+        <p class="hero-tag">Celebremos el Amor</p>
+        <h1 class="hero-names">María <span>&</span> Juan</h1>
+        <div class="hero-divider"></div>
+        <p class="hero-date">Sábado 15 Agosto, 2026</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-glass">
+    
+    <section class="section">
+      <h2 class="script-subtitle">Falta tan solo...</h2>
+      <div class="timer-display">
+        <div class="timer-item"><span id="days">00</span><p>Días</p></div>
+        <div class="timer-item"><span id="hours">00</span><p>Horas</p></div>
+        <div class="timer-item"><span id="minutes">00</span><p>Minutos</p></div>
+        <div class="timer-item"><span id="seconds">00</span><p>Segundos</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="script-subtitle">Nuestra Historia</h2>
+      <section class="photo-editorial">
+  <div class="photo-card">
+    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000" alt="Boda 1">
   </div>
-
-  <div class="hero-scroll">
-    <span>Desliza</span>
-    <div class="arrow"></div>
+  <div class="photo-card">
+    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1000" alt="Boda 2">
   </div>
-</header>
-
-<!-- ================= CONTADOR ================= -->
-<section class="section fade delay-1">
-  <div class="countdown">
-    <div><span id="days">00</span><small>Días</small></div>
-    <div><span id="hours">00</span><small>Horas</small></div>
-    <div><span id="minutes">00</span><small>Min</small></div>
-    <div><span id="seconds">00</span><small>Seg</small></div>
-  </div>
-</section>
-
-<!-- ================= MENSAJE ================= -->
-<section class="section text-section fade delay-2">
-  <p>
-    Con mucha alegría queremos invitarte a celebrar con nosotros
-    el inicio de esta nueva etapa de nuestras vidas.
-  </p>
-</section>
-
-<!-- ================= BOTONES ================= -->
-<section class="section actions-section fade delay-3">
-  <a href="#" class="btn primary glow">Confirmar asistencia</a>
-  <a href="#mapa" class="btn secondary glow">Ver ubicación</a>
-  <a href="#" class="btn secondary glow">Mesa de regalos</a>
-</section>
-
-<!-- ================= IMAGEN PARALLAX ================= -->
-<section class="image-section">
-  <div class="image-parallax parallax" data-speed="0.15">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Pareja">
+  <div class="photo-card">
+    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000" alt="Boda 3">
   </div>
 </section>
+    </section>
 
-<!-- ================= HISTORIA ================= -->
-<section class="section story-section fade delay-4">
-  <h2>Nuestra historia</h2>
-  <p>
-    Todo comenzó con una mirada, una risa, y hoy estamos aquí,
-    listos para decir “sí” para siempre.
-  </p>
-</section>
+    <section class="section actions">
+      <div class="btn-wrap">
+        <a href="#" class="btn-luxe">
+          <span>Confirmar Asistencia</span>
+          <div class="btn-bg"></div>
+        </a>
+        <a href="#mapa" class="btn-outline">
+          <span>Ver Ubicación</span>
+        </a>
+      </div>
+    </section>
 
-<!-- ================= MAPA ================= -->
-<section id="mapa" class="map-section fade delay-5">
-  <div class="map-container">
-    <iframe 
-      src="https://www.google.com/maps?q=Ciudad%20de%20México&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
+    <section id="mapa" class="section">
+      <div class="map-box reveal-on-scroll">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.142293761144!2d-73.98731968459391!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1ses-419!2s!4v1650000000000!5m2!1ses-419!2s" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
 
-<!-- ================= GALERÍA ================= -->
-<section class="gallery-editorial">
-  <div class="gallery-item">
-    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-  </div>
+  </main>
 
-  <div class="gallery-item">
-    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
-  </div>
+  <footer class="main-footer">
+    <div class="footer-inner">
+      <h3 class="footer-initials">M & J</h3>
+      <div class="footer-line"></div>
+      <p class="footer-hashtag">#BodaMariaYJuan</p>
+    </div>
+  </footer>
 
-  <div class="gallery-item">
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
-  </div>
-</section>
-
-<!-- ================= FRASE FINAL ================= -->
-<section class="quote-section fade delay-5">
-  <p>“El amor verdadero se construye todos los días.”</p>
-</section>
-
-<!-- JS -->
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

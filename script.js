@@ -1,28 +1,26 @@
-/* ================= CONTADOR ================= */
-const eventDate = new Date("2026-08-15T18:00:00").getTime();
+// Reloj regresivo
+const weddingDate = new Date("Aug 15, 2026 18:00:00").getTime();
 
 setInterval(() => {
-  const now = Date.now();
-  const diff = eventDate - now;
+  const now = new Date().getTime();
+  const diff = weddingDate - now;
 
-  days.textContent = Math.floor(diff / 86400000);
-  hours.textContent = Math.floor((diff / 3600000) % 24);
-  minutes.textContent = Math.floor((diff / 60000) % 60);
-  seconds.textContent = Math.floor((diff / 1000) % 60);
+  document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+  document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+  document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+  document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
 }, 1000);
 
-/* ================= PARALLAX CONTROLADO ================= */
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-
-  document.querySelectorAll(".parallax").forEach(el => {
-    const speed = parseFloat(el.dataset.speed || 0.2);
-    const offset = Math.min(scrollY * speed, 140);
-    el.style.transform = `translateY(${offset}px)`;
+// Revelación al scroll
+const reveal = () => {
+  const elements = document.querySelectorAll('.reveal-on-scroll');
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
   });
+};
 
-  document.querySelectorAll(".image-parallax").forEach(el => {
-    const offset = Math.min(scrollY * 0.15, 120);
-    el.style.transform = `translateY(${offset}px)`;
-  });
-});
+window.addEventListener('scroll', reveal);
+window.onload = reveal;
